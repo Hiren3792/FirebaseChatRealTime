@@ -1,0 +1,65 @@
+Firebase chat APP Demo :-
+ there are below few step for creating firebase chat app with realtime database
+
+
+1. firstly create project on firebase consol
+2. then go to the Real Time Datbase option on left side 
+3. copy that firebase URL and paste in to firebaseURl variable in constant.swift
+  eg. url like :- https://fir-chat-1b561-default-rtdb.firebaseio.com/
+4. now go to the terminal with project folder
+5. create pod file with "pod init"
+6. insert below pods in your podfile
+      pod 'Firebase/Core’
+      pod 'Firebase/Auth’
+      pod 'Firebase/Database’
+      pod 'Firebase/Messaging'
+      pod 'Firebase/Storage’
+      pod 'SVProgressHUD'
+      pod 'IQKeyboardManager'
+7. install pod from terminal with command "pod install"
+8. open .xworkspace project file 
+9. insert your child path in constant file with databaseChats variable 
+10. and create structure of your chat database in constant file 
+     i am usinf below structure for eg.
+     struct Message {
+        var mediaName: String
+        var mediaType: String
+        var messageText: String
+        var messageTime: String
+        var messageDate: String
+        var senderId: String
+    
+        func toDict() -> [String: Any] {
+            return [
+             "mediaName" : mediaName,
+             "mediaType": mediaType,
+             "messageText": messageText,
+             "messageTime": messageTime,
+             "messageDate": messageDate,
+             "senderId": senderId ]
+          }
+        }
+11. go the chat file setup your project with your UI 
+12. add below code in to the your send button action 
+
+        let messageData = Message(mediaName: "", mediaType: "text", messageText: txtView.text ?? "", messageTime: "Time", messageDate: "date", senderId: "id")
+        let ref = Constant.refs.databaseUser.childByAutoId()
+        ref.setValue(messageData.toDict())
+        txtView.text = ""
+
+13. add below code to view did load for update chatview screen after receiving or sending text to firebase database 
+ Constant.refs.databaseUser = Constant.refs.databaseChats.child("16-30")
+        let query = Constant.refs.databaseUser
+        _ = query.observe(.childAdded, with: { [weak self] snapshot in
+            if let data = snapshot.value as? [String: String] {
+                let mediaName = data["mediaName"] ?? ""
+                let mediaType = data["mediaType"] ?? ""
+                let messageText = data["messageText"] ?? ""
+                let messageTime = data["messageTime"] ?? ""
+                let messageDate = data["messageDate"] ?? ""
+                let senderId = data["senderId"] ?? ""
+                self?.chatHistory.append(Message(mediaName: mediaName, mediaType: mediaType, messageText: messageText, messageTime: messageTime, messageDate: messageDate, senderId: senderId))
+            }
+            self?.tblView.reloadData()
+        })
+        
