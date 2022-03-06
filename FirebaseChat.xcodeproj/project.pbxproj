@@ -12,7 +12,6 @@
 		0407A6CA2786E8D30072F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407A6C82786E8D30072F385 /* Main.storyboard */; };
 		0407A6CC2786E8D50072F385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407A6CB2786E8D50072F385 /* Assets.xcassets */; };
 		0407A6CF2786E8D50072F385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407A6CD2786E8D50072F385 /* LaunchScreen.storyboard */; };
-		04084B942787F3F000C43A2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04084B932787F3EF00C43A2C /* GoogleService-Info.plist */; };
 		04084B972787FA9D00C43A2C /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084B962787FA9C00C43A2C /* KeyboardLayoutConstraint.swift */; };
 		04084BA42787FB4600C43A2C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084BA32787FB4500C43A2C /* ChatVC.swift */; };
 		04084BAC2787FCA200C43A2C /* TxtReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04084BA72787FCA200C43A2C /* TxtReceiverCell.xib */; };
@@ -33,7 +32,6 @@
 		0407A6CB2786E8D50072F385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0407A6CE2786E8D50072F385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0407A6D02786E8D50072F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04084B932787F3EF00C43A2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04084B962787FA9C00C43A2C /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		04084BA32787FB4500C43A2C /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		04084BA72787FCA200C43A2C /* TxtReceiverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TxtReceiverCell.xib; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				04084BD02788041300C43A2C /* Utils */,
 				04084BC32788036800C43A2C /* CustomClass */,
 				04084BC22788035F00C43A2C /* ChatVc */,
-				04084B932787F3EF00C43A2C /* GoogleService-Info.plist */,
 				0407A6C22786E8D30072F385 /* AppDelegate.swift */,
 				0407A6C62786E8D30072F385 /* ViewController.swift */,
 				0407A6C82786E8D30072F385 /* Main.storyboard */,
@@ -238,7 +235,6 @@
 				0407A6CA2786E8D30072F385 /* Main.storyboard in Resources */,
 				04084BAE2787FCA200C43A2C /* TxtSenderCell.xib in Resources */,
 				04084BAC2787FCA200C43A2C /* TxtReceiverCell.xib in Resources */,
-				04084B942787F3F000C43A2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 struct Constant {
-    static let firebaseUrl: String = "https://fir-chat-1a516-default-rtdb.firebaseio.com/"
+    static let firebaseUrl: String = "Your firebase realtime database base url"
     
     struct refs {
      static let databaseRoot = Database.database().reference()
